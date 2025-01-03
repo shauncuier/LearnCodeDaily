@@ -6,4 +6,53 @@
 body{
     font-family: 'Arial', sans-serif;
 }
+.content{
+    width: 90%;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: auto;
+    
+}
 
+h1{
+    color: #333;
+    margin-top: 20px;
+}
+p{
+    color: #575a55;
+    margin-top: 20px;
+}
+
+.image img{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid #dddddc;
+
+}
+#button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+#button:hover{
+    background-color: #575a55;
+
+}
+
+
+.blog{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
