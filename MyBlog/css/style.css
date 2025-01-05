@@ -9,6 +9,8 @@ body {
     background-color: #f4f4f4;
     line-height: 1.6;
     margin-top: 40px;
+    width: 80%;
+    margin: auto;
 }
 nav {
     background-color: #333;
