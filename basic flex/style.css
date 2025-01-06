@@ -1,0 +1,9 @@
+.parent{
+    background-color: aliceblue;
+}
+
+.child{
+    background-color: aqua;
+    border: 1px solid black;
+    margin: 10px;
+}
