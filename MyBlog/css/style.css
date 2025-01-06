@@ -13,13 +13,16 @@ body {
     margin: auto;
 }
 nav {
+    border-radius: 0 0 10px 10px ;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
+    margin-bottom: 20px;
     top: 0;
-    width: 100%;
+    width: 80%;
+
 }
 nav li {
     display: inline;
@@ -44,7 +47,10 @@ h1 {
     margin-bottom: 20px;
 }
 
-
+article {
+    margin-top: 100px ;
+    margin-bottom: 100px;
+}
 
 figure {
     margin: 20px 0;
@@ -52,11 +58,13 @@ figure {
 }
 
 footer{
+    
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 80%;
+    border-radius: 10px 10px 0 0;
 }

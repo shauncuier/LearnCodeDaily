@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", "Poppins", sans-serif;
+}
+.hero {
+    height: 919px;
+  position: relative;
+  background-image: url(../assets/hero-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content {
+  text-align: center;
+  
+}
+.btn{
+padding: 21px 32px;
+border-radius: 8px;
+background: #52C303;
+text-decoration: none;
+color: #fff;
+font-weight: 800;
+}
+.cardinfo{
+    text-align: center;
+    margin-top: 30px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.card-item{
+    width: 30%;
+    text-align: center;
+    margin-top: 30px;
+
+}
