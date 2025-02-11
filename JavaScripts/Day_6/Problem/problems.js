@@ -17,7 +17,7 @@ for (let i = 0; i < products.length; i++) {
         uniqueProducts.push(element);
     }
 }
-console.log(uniqueProducts);
+// console.log(uniqueProducts);
 
 
 
@@ -41,8 +41,7 @@ console.log(uniqueProducts);
 //     clothing: ["T-Shirt", "Jeans"]
 // }
 
-
-const products = [
+const Products = [
     { name: "Shirt", category: "Clothing" },
     { name: "Laptop", category: "Electronics" },
     { name: "T-Shirt", category: "Clothing" },
@@ -50,24 +49,20 @@ const products = [
     { name: "Jeans", category: "Clothing" },
 ];
 
-let productsByCategory = {
+let productCategories = {
     electronics: [],
     clothing: []
 };
 
-for (let i = 0; i < products.length; i++) {
-    const element = products[i];
-    if (element.category === "Electronics") {
-        productsByCategory.electronics.push(element.name);
+for (let i = 0; i < Products.length; i++) {
+    const product = Products[i];
+    if (product.category.toLowerCase() === "electronics") {
+        productCategories.electronics.push(product.name);
     } else {
-        productsByCategory.clothing.push(element.name);
+        productCategories.clothing.push(product.name);
     }
 }
-
-console.log(productsByCategory);
-
-
-
+console.log(productCategories);
 
 
 // Problem 3:
@@ -79,6 +74,55 @@ console.log(productsByCategory);
 // output:
 // 15
 
+// solution 1
+
+// let price = "$249";
+
+// let sum = 0;
+
+// for (let i = 0; i < price.length; i++) {
+
+//     if (!isNaN(price[i])) { // check if the character is a number
+//         sum += parseInt(price[i]);
+//     }
+// }       
+// console.log(sum);
+
+// solution 2
+
+// let price = "$249";
+
+// let characters = price.split("");
+
+// let sum = 0;
+
+// for (let i = 0; i < characters.length; i++) {
+
+//     if (!isNaN(characters[i])) { // check if the character is a number
+//         sum += parseInt(characters[i]);
+//     }   
+// }
+// console.log(sum);
+
+// solution 3
+
+let price = "$249";
+
+let characters = price.split("");
+
+let sum = 0;
+
+for (let i = 0; i < characters.length; i++) {
+    let element = characters[i];
+
+    if (!isNaN(element) && element !== ' ') { // check if the character is a number
+        sum += parseInt(element);
+    }
+}
+// console.log(sum);
+
+
+
 
 
 // Problem 4:
@@ -89,3 +133,10 @@ console.log(productsByCategory);
 
 // output
 // "backpack durable and Lightweight"
+
+
+
+let description = "Lightweight and durable backpack";
+let words = description.split(" ");
+description = words.reverse().join(" ");
+// console.log(description);
