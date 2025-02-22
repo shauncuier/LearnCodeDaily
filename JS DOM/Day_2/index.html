@@ -18,25 +18,20 @@
 
     <button onclick="bgRed()">Bg Red</button>
     <button onclick="bgYellow()">Bg Yellow</button>
-    <button onclick="bgBlue()">Bg Blue</button>
-    <button onclick="bgGreen()">Bg Green</button>
-
-    <br />
+    <!-- <button onclick="bgBlue()">Bg Blue</button> -->
+    <!-- <button onclick="bgGreen()">Bg Green</button> -->
 
     <button id="btn-make-blue">Make Blue</button>
 
-    <br />
-
     <button id="btn-make-purple">Make Purple</button>
 
-    <script>
-        const btnMakePurple = document.getElementById("btn-make-purple");
-        
-        btnMakePurple.onclick = makePurple;
+    <button id="btn-make-green">Make Green</button>
 
-        function makePurple() {
-            document.body.style.backgroundColor = "purple";
-        };
+    <script>
+        document.getElementById('btn-make-green').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'green';
+        });
+
     </script>
 
     <script src="./js/event.js"></script>
