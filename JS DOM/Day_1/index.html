@@ -39,7 +39,7 @@
             <li>Water Melon</li>
         </ul>
 
-        <h2>Ptaces I Like to Visit</h2>
+        <h2 id="place">Places I Like to Visit</h2>
 
         <ul>
             <li>London</li>
@@ -58,16 +58,19 @@
 
         const liCollection = document.getElementsByTagName('li');
         for (const li of liCollection) {
-            console.log(li);
+            // console.log(li);
         }
 
 
         const allHeading = document.getElementsByTagName('h1');
 
         for (const h1 of allHeading) {
-            console.log(h1);
+            // console.log(h1);
         }
 
+
+        const place = document.getElementById('place');
+        place.innerText = 'Places come from js';
 
     </script>
 </body>
