@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Event</title>
-    <link rel="stylesheet" href="https://classless.de/classless.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://classless.de/classless.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
     <h1>DOM Events</h1>
     <button onclick="console.log(5)">Click Me</button>
     <button onclick="console.log(43535)">Button 2</button>
 
+    <h2>Change Background Color</h2>
 
-    <h2>Button more</h2>
+    <button onclick="bgRed()">Bg Red</button>
+    <button onclick="bgYellow()">Bg Yellow</button>
+    <button onclick="bgBlue()">Bg Blue</button>
+    <button onclick="bgGreen()">Bg Green</button>
 
+    <br />
 
-    
-    <a href="#">More</a>
+    <button id="btn-make-blue">Make Blue</button>
+
+    <br />
+
+    <button id="btn-make-purple">Make Purple</button>
+
+    <script>
+        const btnMakePurple = document.getElementById("btn-make-purple");
+        
+        btnMakePurple.onclick = makePurple;
+
+        function makePurple() {
+            document.body.style.backgroundColor = "purple";
+        };
+    </script>
 
     <script src="./js/event.js"></script>
 </body>
+
 </html>
