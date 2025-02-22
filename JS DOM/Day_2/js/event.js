@@ -27,3 +27,9 @@ btnMakePurple.onclick = makePurple;
 function makePurple() {
     document.body.style.backgroundColor = "purple";
 }
+
+// Event handler type 4
+
+document.getElementById('btn-make-green').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'green';
+});
