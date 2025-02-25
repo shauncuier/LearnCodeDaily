@@ -11,7 +11,7 @@
 
 <body>
     <h1>DOM Events</h1>
-    <button onclick="console.log(5)">Click Me</button>
+    <button onclick="alert('Love or Not')">Click Me</button>
     <button onclick="console.log(43535)">Button 2</button>
 
     <h2>Change Background Color</h2>
@@ -27,8 +27,12 @@
 
     <button id="btn-make-green">Make Green</button>
 
+    <button id="btn-make-gold">Make Gold</button>
+
     <script>
-        
+        document.getElementById('btn-make-gold').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'goldenrod';
+        })
 
     </script>
 
