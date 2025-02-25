@@ -8,23 +8,24 @@ document.getElementById("addProductBtn").addEventListener("click", function () {
     const newProduct = document.createElement("div");
     newProduct.innerHTML = `
 
-        <div class="card bg-base-100 w-[20%] shadow-sm">
-                <figure>
-                    <img src="${productImage}" alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">
-                    ${productName}
-                        <div class="badge badge-secondary">Name</div>
-                    </h2>
+<div class="card bg-base-100 w-96 shadow-sm mt-5 ">
+            <figure>
+                <img src="${productImage}" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+                <h2 class="card-title">
+                ${productName}
+                    <div class="badge badge-secondary">Name</div>
+                </h2>
 
-                    <div class="card-actions justify-end">
+                <div class="card-actions justify-end">
 
-                        <div class="badge badge-outline">Price: $${productPrice}</div>
-                    </div>
+                    <div class="badge badge-outline">Price: $${productPrice}</div>
                 </div>
             </div>
+        </div>
 
     `;
     productCard.appendChild(newProduct);
+
 });
