@@ -8,7 +8,7 @@ document.getElementById("addProductBtn").addEventListener("click", function () {
     const newProduct = document.createElement("div");
     newProduct.innerHTML = `
 
-<div class="card bg-base-100 w-96 shadow-sm mt-5 ">
+<div class="card bg-base-100 w-96 shadow-sm m-5 p-5 rounded-box">
             <figure>
                 <img src="${productImage}" alt="Shoes" />
             </figure>
@@ -27,5 +27,4 @@ document.getElementById("addProductBtn").addEventListener("click", function () {
 
     `;
     productCard.appendChild(newProduct);
-
 });
