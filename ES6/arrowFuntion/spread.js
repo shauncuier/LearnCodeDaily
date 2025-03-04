@@ -23,9 +23,14 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-console.log(...numbers);
+// console.log(...numbers);
 
 // 2. Spread operator with object
+
+
+const maxNubers = [12323, 35435, 32434, 44546, 55677, 6664, 734545, 84545, 54534, 10234, 113467];
+
+console.log(Math.max(...maxNubers));
 
 
 
