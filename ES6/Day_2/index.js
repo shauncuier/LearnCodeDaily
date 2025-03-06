@@ -93,7 +93,7 @@ const mobileProducts = [
 
 
 const singleMobileProduct = mobileProducts.filter(product => product.name === 'nokia');
-console.log(singleMobileProduct);
+// console.log(singleMobileProduct);
 
 
 const singleProduct = mobileProducts.find(product => product.id === 8);
