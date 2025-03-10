@@ -1,0 +1,346 @@
+[
+    
+    {
+        "company": "Acme Corp",
+        "industry": "Technology",
+        "location": "Seattle",
+        "employees": 500
+    },
+    {
+        "company": "Beta Inc",
+        "industry": "Finance",
+        "location": "New York",
+        "employees": 200
+    },
+    {
+        "company": "Gamma Co",
+        "industry": "Healthcare",
+        "location": "Boston",
+        "employees": 300
+    },
+    {
+        "company": "Delta Ltd",
+        "industry": "Retail",
+        "location": "Chicago",
+        "employees": 150
+    },
+    {
+        "company": "Epsilon Group",
+        "industry": "Manufacturing",
+        "location": "Detroit",
+        "employees": 400
+    },
+    {
+        "company": "Zeta Corp",
+        "industry": "Technology",
+        "location": "San Francisco",
+        "employees": 600
+    },
+    {
+        "company": "Eta Inc",
+        "industry": "Finance",
+        "location": "London",
+        "employees": 250
+    },
+    {
+        "company": "Theta Co",
+        "industry": "Healthcare",
+        "location": "Houston",
+        "employees": 350
+    },
+    {
+        "company": "Iota Ltd",
+        "industry": "Retail",
+        "location": "Miami",
+        "employees": 180
+    },
+    {
+        "company": "Kappa Group",
+        "industry": "Manufacturing",
+        "location": "Dallas",
+        "employees": 450
+    },
+    {
+        "company": "Lambda Corp",
+        "industry": "Technology",
+        "location": "Austin",
+        "employees": 550
+    },
+    {
+        "company": "Mu Inc",
+        "industry": "Finance",
+        "location": "Toronto",
+        "employees": 220
+    },
+    {
+        "company": "Nu Co",
+        "industry": "Healthcare",
+        "location": "Atlanta",
+        "employees": 320
+    },
+    {
+        "company": "Xi Ltd",
+        "industry": "Retail",
+        "location": "Philadelphia",
+        "employees": 160
+    },
+    {
+        "company": "Omicron Group",
+        "industry": "Manufacturing",
+        "location": "Phoenix",
+        "employees": 420
+    },
+    {
+        "company": "Pi Corp",
+        "industry": "Technology",
+        "location": "Denver",
+        "employees": 520
+    },
+    {
+        "company": "Rho Inc",
+        "industry": "Finance",
+        "location": "Vancouver",
+        "employees": 210
+    },
+    {
+        "company": "Sigma Co",
+        "industry": "Healthcare",
+        "location": "San Diego",
+        "employees": 310
+    },
+    {
+        "company": "Tau Ltd",
+        "industry": "Retail",
+        "location": "Charlotte",
+        "employees": 155
+    },
+    {
+        "company": "Upsilon Group",
+        "industry": "Manufacturing",
+        "location": "San Antonio",
+        "employees": 410
+    },
+    {
+        "company": "Phi Corp",
+        "industry": "Technology",
+        "location": "San Jose",
+        "employees": 510
+    },
+    {
+        "company": "Chi Inc",
+        "industry": "Finance",
+        "location": "Montreal",
+        "employees": 205
+    },
+    {
+        "company": "Psi Co",
+        "industry": "Healthcare",
+        "location": "Orlando",
+        "employees": 305
+    },
+    {
+        "company": "Omega Ltd",
+        "industry": "Retail",
+        "location": "Las Vegas",
+        "employees": 152
+    },
+    {
+        "company": "Alpha Group",
+        "industry": "Manufacturing",
+        "location": "Riverside",
+        "employees": 405
+    },
+    {
+        "company": "Acme Corp",
+        "industry": "Technology",
+        "location": "Seattle",
+        "employees": 500
+    },
+    {
+        "company": "Beta Inc",
+        "industry": "Finance",
+        "location": "New York",
+        "employees": 200
+    },
+    {
+        "company": "Gamma Co",
+        "industry": "Healthcare",
+        "location": "Boston",
+        "employees": 300
+    },
+    {
+        "company": "Delta Ltd",
+        "industry": "Retail",
+        "location": "Chicago",
+        "employees": 150
+    },
+    {
+        "company": "Epsilon Group",
+        "industry": "Manufacturing",
+        "location": "Detroit",
+        "employees": 400
+    },
+    {
+        "company": "Zeta Corp",
+        "industry": "Technology",
+        "location": "San Francisco",
+        "employees": 600
+    },
+    {
+        "company": "Eta Inc",
+        "industry": "Finance",
+        "location": "London",
+        "employees": 250
+    },
+    {
+        "company": "Theta Co",
+        "industry": "Healthcare",
+        "location": "Houston",
+        "employees": 350
+    },
+    {
+        "company": "Iota Ltd",
+        "industry": "Retail",
+        "location": "Miami",
+        "employees": 180
+    },
+    {
+        "company": "Kappa Group",
+        "industry": "Manufacturing",
+        "location": "Dallas",
+        "employees": 450
+    },
+    {
+        "company": "Lambda Corp",
+        "industry": "Technology",
+        "location": "Austin",
+        "employees": 550
+    },
+    {
+        "company": "Mu Inc",
+        "industry": "Finance",
+        "location": "Toronto",
+        "employees": 220
+    },
+    {
+        "company": "Nu Co",
+        "industry": "Healthcare",
+        "location": "Atlanta",
+        "employees": 320
+    },
+    {
+        "company": "Xi Ltd",
+        "industry": "Retail",
+        "location": "Philadelphia",
+        "employees": 160
+    },
+    {
+        "company": "Omicron Group",
+        "industry": "Manufacturing",
+        "location": "Phoenix",
+        "employees": 420
+    },
+    {
+        "company": "Pi Corp",
+        "industry": "Technology",
+        "location": "Denver",
+        "employees": 520
+    },
+    {
+        "company": "Rho Inc",
+        "industry": "Finance",
+        "location": "Vancouver",
+        "employees": 210
+    },
+    {
+        "company": "Sigma Co",
+        "industry": "Healthcare",
+        "location": "San Diego",
+        "employees": 310
+    },
+    {
+        "company": "Tau Ltd",
+        "industry": "Retail",
+        "location": "Charlotte",
+        "employees": 155
+    },
+    {
+        "company": "Upsilon Group",
+        "industry": "Manufacturing",
+        "location": "San Antonio",
+        "employees": 410
+    },
+    {
+        "company": "Phi Corp",
+        "industry": "Technology",
+        "location": "San Jose",
+        "employees": 510
+    },
+    {
+        "company": "Chi Inc",
+        "industry": "Finance",
+        "location": "Montreal",
+        "employees": 205
+    },
+    {
+        "company": "Psi Co",
+        "industry": "Healthcare",
+        "location": "Orlando",
+        "employees": 305
+    },
+    {
+        "company": "Omega Ltd",
+        "industry": "Retail",
+        "location": "Las Vegas",
+        "employees": 152
+    },
+    {
+        "company": "Alpha Group",
+        "industry": "Manufacturing",
+        "location": "Riverside",
+        "employees": 405
+    },
+    {
+        "company": "Acme Corp",
+        "industry": "Technology",
+        "location": "Seattle",
+        "employees": 500,
+        "revenue": 1000000,
+        "ceo": "John Smith"
+    },
+    {
+        "company": "Beta Inc",
+        "industry": "Finance",
+        "location": "New York",
+        "employees": 200,
+        "revenue": 500000,
+        "ceo": "Jane Doe"
+    },
+    {
+        "company": "Gamma Co",
+        "industry": "Healthcare",
+        "location": "Boston",
+        "employees": 300,
+        "revenue": 750000,
+        "ceo": "Robert Jones"
+    },
+    {
+        "company": "Delta Ltd",
+        "industry": "Retail",
+        "location": "Chicago",
+        "employees": 150,
+        "revenue": 300000,
+        "ceo": "Emily Brown"
+    },
+    {
+        "company": "Epsilon Group",
+        "industry": "Manufacturing",
+        "location": "Detroit",
+        "employees": 400,
+        "revenue": 800000,
+        "ceo": "Michael Davis"
+    }
+]
+
+
+

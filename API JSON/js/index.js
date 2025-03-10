@@ -8,8 +8,6 @@ const loadUser = () => {
     );
 }
 
-
-
 const displayUser = (users) => {
     const ul = document.getElementById('data');
     for (const user of users) {
@@ -17,6 +15,6 @@ const displayUser = (users) => {
         li.innerText = user.name;
         ul.appendChild(li);
     }
-    
-    
 }
+
+
