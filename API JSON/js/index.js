@@ -34,22 +34,22 @@
 
 
 
-fetch('./json/test.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        displayUser(data);
-    }
-    );
+// fetch('./json/test.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//         displayUser(data);
+//     }
+//     );
 
-const displayUser = (users) => {
-    const ul = document.getElementById('data');
-    for (const user of users) {
-        const li = document.createElement('li');
-        li.innerText = user.company;
-        ul.appendChild(li);
-    }
-}
+// const displayUser = (users) => {
+//     const ul = document.getElementById('data');
+//     for (const user of users) {
+//         const li = document.createElement('li');
+//         li.innerText = user.company;
+//         ul.appendChild(li);
+//     }
+// }
 
 
 
