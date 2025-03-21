@@ -1,4 +1,5 @@
 const API_URL = 'https://countriesnow.space/api/v0.1/countries/info?returns=currency,flag,unicodeFlag,dialCode';
+let allCountries = []; // Store all countries data
 
 const createElement = (tag, content, attributes = {}) => {
   const element = document.createElement(tag);
@@ -7,9 +8,9 @@ const createElement = (tag, content, attributes = {}) => {
   return element;
 };
 
-const displayCountryInfo = (countryData) => {
+const displayCountryInfo = (countryData, container = document.body) => {
   const {name, currency, flag, unicodeFlag, dialCode} = countryData;
-  const container = document.createElement('div');
+  const countryContainer = document.createElement('div');
   
   const elements = [
     createElement('h2', name),
@@ -19,7 +20,7 @@ const displayCountryInfo = (countryData) => {
     createElement('p', `Dial Code: ${dialCode}`)
   ];
   
-  container.style.cssText = `
+  countryContainer.style.cssText = `
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
@@ -33,8 +34,25 @@ const displayCountryInfo = (countryData) => {
     overflow: hidden;
   `;
   
-  elements.forEach(element => container.appendChild(element));
-  document.body.appendChild(container);
+  elements.forEach(element => countryContainer.appendChild(element));
+  container.appendChild(countryContainer);
+};
+
+const searchCountry = () => {
+  const searchInput = document.getElementById('searchInput').value.toLowerCase();
+  const resultContainer = document.getElementById('countryResult');
+  resultContainer.innerHTML = ''; // Clear previous results
+  
+  const filteredCountries = allCountries.filter(country => 
+    country.name.toLowerCase().includes(searchInput)
+  );
+  
+  if (filteredCountries.length === 0) {
+    resultContainer.innerHTML = '<p>No countries found</p>';
+    return;
+  }
+  
+  filteredCountries.forEach(country => displayCountryInfo(country, resultContainer));
 };
 
 fetch(API_URL)
@@ -43,8 +61,9 @@ fetch(API_URL)
     return response.json();
   })
   .then(data => {
-    // Sort countries by name alphabetically
-    const sortedCountries = data.data.sort((a, b) => a.name.localeCompare(b.name));
-    sortedCountries.forEach(displayCountryInfo);
+    allCountries = data.data.sort((a, b) => a.name.localeCompare(b.name));
+    // Initially display all countries
+    const resultContainer = document.getElementById('countryResult');
+    allCountries.forEach(country => displayCountryInfo(country, resultContainer));
   })
   .catch(error => console.error('Error fetching country data:', error));
