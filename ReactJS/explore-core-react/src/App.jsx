@@ -9,7 +9,24 @@ function App() {
       <Person />
       <Products />
       <Button />
+
+      <Developer name="John Doe" tech="React" />
+      <Developer name="Jane Doe" tech="Angular" />
+      <Developer name="Alice" tech="Vue" />
+      <Developer name="Bob" tech="Svelte" />
+      <Developer name="Charlie" tech="Ember" />
+      
+
     </>
+  )
+}
+
+function Developer(props) {
+  return (
+    <div style={{border: '1px solid', margin: '10px', padding: '10px', borderRadius: '15px'}}>
+      <h3>Developer: {props.name}</h3>
+      <p> Tecnology: {props.tech}</p>
+    </div>
   )
 }
 
