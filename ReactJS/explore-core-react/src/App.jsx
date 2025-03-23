@@ -23,7 +23,7 @@ function App() {
 
 function Developer(props) {
   return (
-    <div style={{border: '1px solid', margin: '10px', padding: '10px', borderRadius: '15px'}}>
+    <div className='button' style={{border: '2px solid #646cffaa', margin: '10px', padding: '10px', borderRadius: '15px'}}>
       <h3>Developer: {props.name}</h3>
       <p> Tecnology: {props.tech}</p>
     </div>
