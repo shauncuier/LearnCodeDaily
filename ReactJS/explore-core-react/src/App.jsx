@@ -1,13 +1,12 @@
-
-import './App.css'
+import "./App.css";
+import Age from "./components/Age";
 
 function App() {
   return (
-    <>   
-      <h1 className='text-red-300 text-2xl'>hello</h1>
+    <>
+      <Age />
     </>
-  )
+  );
 }
 
-
-export default App
+export default App;
