@@ -1,3 +1,0 @@
-This is a test file for practicing Git commands.
-Feel free to add, modify, or delete content as you practice.
-Happy coding!
