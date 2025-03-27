@@ -129,5 +129,5 @@ const products = [
 const totalPrice = products.map((product) => product.price * product.count);
 // console.log(totalPrice);
 
-const productname = products.filter((product) => product.name==='mouse');
+const productname = products.filter((product) => product.name === 'mouse');
 console.log(productname);
