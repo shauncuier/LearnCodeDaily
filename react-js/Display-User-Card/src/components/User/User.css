@@ -1,0 +1,20 @@
+.user {
+    background-color: #101010;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.user img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user button {
+    background-color: orange;
+    color: #000;
+    font-weight: 700;
+}
