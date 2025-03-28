@@ -1,12 +1,20 @@
 import React from 'react';
 import './User.css';
-function User({user}) {
-    const {name, userId, email, location, image } = user;
-    
+import Swal from 'sweetalert2';
+
+function User({ user }) {
+    const { name, userId, image } = user;
+
+
     const handleAlert = () => {
-        alert(`Hello ${name}`);
+        Swal.fire({
+            title: name,
+            text: 'Friend Added',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
     }
-    
+
     return (
         <div className='user'>
             <img src={image} alt={name} />
