@@ -7,7 +7,7 @@ function Users({usersData}) {
     
     return (
         <div>
-            <h1>Hello from Users</h1>
+            <h3>Users: {users.length}</h3>
             <div className='users-grid'>
             {
                 users.map(user => <User key={user.id} user={user}></User>)
