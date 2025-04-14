@@ -4,16 +4,9 @@ import { Outlet } from 'react-router';
 
 const Root = () => {
     return (
-        <div>
-            <h1>Root Page</h1>
-
+        <div>  
             <Header />
-
-
             <Outlet></Outlet>
-
-
-
         </div>
     );
 };
