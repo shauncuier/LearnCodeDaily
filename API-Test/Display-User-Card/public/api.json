@@ -1,0 +1,356 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "position": "Software Engineer",
+            "email": "johndoe@example.com",
+            "phone": "+1-555-1234",
+            "department": "Development",
+            "salary": 75000,
+            "hire_date": "2022-05-10",
+            "location": "New York, USA"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "position": "Project Manager",
+            "email": "janesmith@example.com",
+            "phone": "+1-555-5678",
+            "department": "Management",
+            "salary": 90000,
+            "hire_date": "2021-09-15",
+            "location": "Los Angeles, USA"
+        },
+        {
+            "id": 3,
+            "name": "Emily Johnson",
+            "position": "UI/UX Designer",
+            "email": "emilyjohnson@example.com",
+            "phone": "+1-555-7890",
+            "department": "Design",
+            "salary": 68000,
+            "hire_date": "2023-02-20",
+            "location": "Chicago, USA"
+        },
+        {
+            "id": 4,
+            "name": "Michael Brown",
+            "position": "Data Analyst",
+            "email": "michaelbrown@example.com",
+            "phone": "+1-555-2345",
+            "department": "Analytics",
+            "salary": 72000,
+            "hire_date": "2020-08-12",
+            "location": "Boston, USA"
+        },
+        {
+            "id": 5,
+            "name": "Sarah Wilson",
+            "position": "Marketing Specialist",
+            "email": "sarahwilson@example.com",
+            "phone": "+1-555-6789",
+            "department": "Marketing",
+            "salary": 65000,
+            "hire_date": "2019-11-05",
+            "location": "San Francisco, USA"
+        },
+        {
+            "id": 6,
+            "name": "David Lee",
+            "position": "DevOps Engineer",
+            "email": "davidlee@example.com",
+            "phone": "+1-555-3456",
+            "department": "IT",
+            "salary": 80000,
+            "hire_date": "2021-06-25",
+            "location": "Seattle, USA"
+        },
+        {
+            "id": 7,
+            "name": "Laura Martinez",
+            "position": "HR Manager",
+            "email": "lauramartinez@example.com",
+            "phone": "+1-555-4567",
+            "department": "Human Resources",
+            "salary": 85000,
+            "hire_date": "2018-03-18",
+            "location": "Miami, USA"
+        },
+        {
+            "id": 8,
+            "name": "James Anderson",
+            "position": "Cybersecurity Analyst",
+            "email": "jamesanderson@example.com",
+            "phone": "+1-555-5670",
+            "department": "Security",
+            "salary": 78000,
+            "hire_date": "2022-09-30",
+            "location": "Dallas, USA"
+        },
+        {
+            "id": 9,
+            "name": "Olivia Thomas",
+            "position": "Customer Support Lead",
+            "email": "oliviathomas@example.com",
+            "phone": "+1-555-6780",
+            "department": "Customer Support",
+            "salary": 62000,
+            "hire_date": "2020-01-22",
+            "location": "Denver, USA"
+        },
+        {
+            "id": 10,
+            "name": "Robert White",
+            "position": "Finance Manager",
+            "email": "robertwhite@example.com",
+            "phone": "+1-555-7891",
+            "department": "Finance",
+            "salary": 95000,
+            "hire_date": "2017-07-10",
+            "location": "Atlanta, USA"
+        }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "title": "Web Development",
+            "description": "Custom web development services to build responsive, scalable, and interactive websites tailored to your business needs.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Node.js"
+            ],
+            "pricing": "Starts at $500",
+            "image": "https://example.com/images/web-development.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Mobile App Development",
+            "description": "Develop high-performance mobile applications for iOS and Android with an intuitive user interface and smooth performance.",
+            "technologies": [
+                "React Native",
+                "Swift",
+                "Kotlin",
+                "Firebase"
+            ],
+            "pricing": "Starts at $800",
+            "image": "https://example.com/images/mobile-app-development.jpg"
+        },
+        {
+            "id": 3,
+            "title": "E-Commerce Solutions",
+            "description": "End-to-end e-commerce solutions, including online store setup, payment integration, inventory management, and user experience optimization.",
+            "technologies": [
+                "Shopify",
+                "WooCommerce",
+                "Magento",
+                "Stripe API"
+            ],
+            "pricing": "Custom pricing based on requirements",
+            "image": "https://example.com/images/ecommerce-solutions.jpg"
+        },
+        {
+            "id": 4,
+            "title": "UI/UX Design",
+            "description": "Design user-centric interfaces with a focus on usability, accessibility, and aesthetic appeal for both web and mobile applications.",
+            "technologies": [
+                "Figma",
+                "Adobe XD",
+                "Sketch",
+                "InVision"
+            ],
+            "pricing": "Starts at $300",
+            "image": "https://example.com/images/ui-ux-design.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Search Engine Optimization (SEO)",
+            "description": "Improve your website's visibility on search engines and drive organic traffic with proven SEO strategies and techniques.",
+            "technologies": [
+                "Google Analytics",
+                "SEMrush",
+                "Moz",
+                "Ahrefs"
+            ],
+            "pricing": "Starts at $400",
+            "image": "https://example.com/images/seo.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Social Media Marketing",
+            "description": "Boost your online presence with tailored social media strategies, content creation, and ad campaigns across major platforms.",
+            "technologies": [
+                "Facebook Ads",
+                "Instagram Ads",
+                "LinkedIn Ads",
+                "Hootsuite"
+            ],
+            "pricing": "Starts at $500/month",
+            "image": "https://example.com/images/social-media-marketing.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Graphic Design",
+            "description": "Create visually striking designs for logos, branding, business cards, social media posts, and more to enhance your brand image.",
+            "technologies": [
+                "Adobe Illustrator",
+                "Photoshop",
+                "Canva"
+            ],
+            "pricing": "Starts at $200",
+            "image": "https://example.com/images/graphic-design.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Content Writing",
+            "description": "High-quality, SEO-optimized content for blogs, articles, website copy, product descriptions, and more to engage your audience.",
+            "technologies": [
+                "WordPress",
+                "Google Docs"
+            ],
+            "pricing": "Starts at $100 per article",
+            "image": "https://example.com/images/content-writing.jpg"
+        }
+    ],
+    "portfolio": [
+        {
+            "id": 1,
+            "title": "E-Commerce Website",
+            "description": "A fully responsive e-commerce platform with product listings, a shopping cart, and secure payment integration.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Stripe API"
+            ],
+            "live_url": "https://example.com/ecommerce",
+            "repo_url": "https://github.com/example/ecommerce",
+            "image": "https://example.com/images/ecommerce.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Personal Portfolio Website",
+            "description": "A modern, responsive personal portfolio website to showcase projects, skills, and experience.",
+            "technologies": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Bootstrap"
+            ],
+            "live_url": "https://example.com/portfolio",
+            "repo_url": "https://github.com/example/portfolio",
+            "image": "https://example.com/images/portfolio.jpg"
+        },
+        {
+            "id": 3,
+            "title": "AI-Powered Chatbot",
+            "description": "An AI chatbot that helps users with customer service inquiries using natural language processing.",
+            "technologies": [
+                "Python",
+                "TensorFlow",
+                "Flask",
+                "Dialogflow"
+            ],
+            "live_url": "https://example.com/chatbot",
+            "repo_url": "https://github.com/example/chatbot",
+            "image": "https://example.com/images/chatbot.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Task Management App",
+            "description": "A task management application with features such as task creation, deadlines, and team collaboration.",
+            "technologies": [
+                "Vue.js",
+                "Firebase",
+                "Tailwind CSS"
+            ],
+            "live_url": "https://example.com/taskapp",
+            "repo_url": "https://github.com/example/taskapp",
+            "image": "https://example.com/images/taskapp.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Real-Time Weather App",
+            "description": "A real-time weather application that fetches data from an API and displays current and forecasted weather conditions.",
+            "technologies": [
+                "React",
+                "OpenWeather API",
+                "CSS"
+            ],
+            "live_url": "https://example.com/weatherapp",
+            "repo_url": "https://github.com/example/weatherapp",
+            "image": "https://example.com/images/weatherapp.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Blog CMS",
+            "description": "A content management system (CMS) for creating and managing blog posts with a user-friendly dashboard.",
+            "technologies": [
+                "Laravel",
+                "MySQL",
+                "Bootstrap"
+            ],
+            "live_url": "https://example.com/blogcms",
+            "repo_url": "https://github.com/example/blogcms",
+            "image": "https://example.com/images/blogcms.jpg"
+        }
+    ],
+    "nav": [
+        {
+            "id": 1,
+            "title": "Home",
+            "url": "/",
+            "icon": "home"
+        },
+        {
+            "id": 2,
+            "title": "About",
+            "url": "/about",
+            "icon": "info"
+        },
+        {
+            "id": 3,
+            "title": "Services",
+            "url": "/services",
+            "icon": "services",
+            "sub_menu": [
+                {
+                    "id": 1,
+                    "title": "Web Development",
+                    "url": "/services/web-development"
+                },
+                {
+                    "id": 2,
+                    "title": "Mobile App Development",
+                    "url": "/services/mobile-app-development"
+                },
+                {
+                    "id": 3,
+                    "title": "E-Commerce Solutions",
+                    "url": "/services/e-commerce-solutions"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Portfolio",
+            "url": "/portfolio",
+            "icon": "portfolio"
+        },
+        {
+            "id": 5,
+            "title": "Blog",
+            "url": "/blog",
+            "icon": "blog"
+        },
+        {
+            "id": 6,
+            "title": "Contact",
+            "url": "/contact",
+            "icon": "contact"
+        }
+    ]
+}
