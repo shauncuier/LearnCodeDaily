@@ -1,15 +1,15 @@
 import React from 'react';
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
-import { Outlet } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     return (
         <div>
-            <Header />
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home Page</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h1>Home</h1>
-            <Outlet />
-            <Footer />
         </div>
     );
 };
