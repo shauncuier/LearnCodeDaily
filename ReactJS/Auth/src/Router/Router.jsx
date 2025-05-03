@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Singin from "../Pages/Auth/Singin/Singin";
+import Register from "../Pages/Auth/Register/Register";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +29,16 @@ export const router = createBrowserRouter([
             {
                 path: "/blogs",
                 Component: Blog,
+            }
+            ,
+            {
+                path: "/singin",
+                Component: Singin,
+            }
+            ,
+            {
+                path: "/register",
+                Component: Register,
             }
         ]
     },

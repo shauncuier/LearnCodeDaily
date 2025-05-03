@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import {  NavLink, useNavigate } from 'react-router';
 
 const Navbar = () => {
+    const navigate = useNavigate();
     return (
         <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
             <div className="container flex justify-between h-16 mx-auto">
@@ -24,8 +25,8 @@ const Navbar = () => {
                     
                 </ul>
                 <div className="items-center flex-shrink-0 hidden lg:flex">
-                    <button className="self-center px-8 py-3 rounded">Sign in</button>
-                    <button className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Sign up</button>
+                    <button onClick={()=> navigate('/singin')} className="self-center px-8 py-3 rounded">Sign in</button>
+                    <button onClick={()=> navigate('/register')} className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Sign up</button>
                 </div>
                 <button className="p-4 lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-800">
