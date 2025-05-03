@@ -25,7 +25,13 @@ dist-ssr
 
 .firebase
 
+
+.firebaserc
+
 Firebase*
 firebase-debug.log
 firebase.json
 firebase-debug.log.lmdb
+firebase-debug.log.lmdb-shm
+firebase-debug.log.lmdb-wal
+firebase-debug.log.lmdb-wal-shm
