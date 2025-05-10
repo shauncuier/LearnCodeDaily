@@ -1,8 +1,12 @@
 import React from 'react';
-import {  NavLink, useNavigate } from 'react-router';
+import {  NavLink, useLocation, useNavigate } from 'react-router';
 
 const Navbar = () => {
     const navigate = useNavigate();
+
+    const {pathname} = useLocation();
+    console.log(pathname);
+    
     return (
         <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
             <div className="container flex justify-between h-16 mx-auto">
@@ -14,18 +18,18 @@ const Navbar = () => {
                 </a>
                 <ul className="items-stretch hidden space-x-3 lg:flex">
                     <li className="flex">
-                        <NavLink to={"/"} className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600">Home</NavLink>
+                        <NavLink to={"/"} className="flex items-center px-4 -mb-1 ">Home</NavLink>
                     </li>
                     <li className="flex">
-                        <NavLink to={"/blogs"} className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600">Blogs</NavLink>
+                        <NavLink to={"/blogs"} className="flex items-center px-4 -mb-1 ">Blogs</NavLink>
                     </li>
                     <li className="flex">
-                        <NavLink to={"/about"} className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600">About</NavLink>
+                        <NavLink to={"/about"} className="flex items-center px-4 -mb-1 ">About</NavLink>
                     </li>
                     
                 </ul>
                 <div className="items-center flex-shrink-0 hidden lg:flex">
-                    <button onClick={()=> navigate('/singin')} className="self-center px-8 py-3 rounded">Sign in</button>
+            <button onClick={()=> navigate('/singin')} className={`self-center px-8 py-3 rounded ${pathname == "/singin" ? "text-red-500":""}`}>Sign in</button>
                     <button onClick={()=> navigate('/register')} className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Sign up</button>
                 </div>
                 <button className="p-4 lg:hidden">

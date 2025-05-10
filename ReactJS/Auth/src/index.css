@@ -1,6 +1,22 @@
 @import "tailwindcss";
 
+.active {
+   
+
+    color: rgb(158, 0, 158);
+    border-bottom: 2px solid rgb(158, 0, 158);
+    font-weight: 600;
+    text-decoration: none;
+    text-underline-offset: 4px;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(158, 0, 158);
+    text-decoration-style: solid;
+}
+
+
+
 /* .active {
-    background-color: #f7fafc;
-    color: #1a202c;
+   
+    @apply border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600;
 } */
