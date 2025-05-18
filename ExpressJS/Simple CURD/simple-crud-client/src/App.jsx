@@ -1,5 +1,6 @@
 
 import './App.css'
+import Users from './Components/Users'
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     <>
       
       <h1>Simple CRUD Opparetion</h1>
-      
+      <Users />
     </>
   )
 }

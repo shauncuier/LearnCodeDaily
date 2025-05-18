@@ -24,12 +24,41 @@ async function run() {
     try {
         // Connect the client to the server	(optional starting in v4.7)
         await client.connect();
+
+
+        // const database = client.db('simpleCRUD');
+        // const usersCollection = database.collection('users');
+
+
+
+        // app.post('/users', async (req, res) => {
+        //     console.log('data send server', req.body);
+        //     const newUser = req.body;
+        //     const result = await usersCollection.insertOne(newUser);
+        //     res.send(result);
+        // })
+
+        const usersCollection = client.db('simpleCRUD').collection('users');
+
+        app.post('/users', async (req, res) => {
+            console.log('data send server', req.body);
+            const newUser = req.body;
+            const result = await usersCollection.insertOne(newUser);
+            res.send(result);
+        }
+        )
+
+
+
+
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
         console.log("You successfully connected to MongoDB!");
+
+
     } finally {
         // Ensures that the client will close when you finish/error
-        await client.close();
+        // await client.close();
     }
 }
 run().catch(console.dir);
