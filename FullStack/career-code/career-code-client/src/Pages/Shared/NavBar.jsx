@@ -3,16 +3,11 @@ import { NavLink } from 'react-router';
 
 const NavBar = () => {
 
-    const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-        
-    </>
+    const links =
+        <>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/about'>About</NavLink></li>
+        </>
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
