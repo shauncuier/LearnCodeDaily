@@ -1,196 +1,131 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FiBriefcase, 
-  FiMail, 
-  FiPhone, 
-  FiMapPin,
-  FiFacebook,
-  FiTwitter,
-  FiLinkedin,
-  FiInstagram,
-  FiHeart
-} from 'react-icons/fi';
+import { FiBriefcase, FiMail, FiPhone, FiMapPin, FiFacebook, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    jobSeekers: [
-      { name: 'Browse Jobs', href: '/jobs' },
-      { name: 'My Applications', href: '/application/me' },
-      { name: 'Profile', href: '/profile' },
-      { name: 'Career Advice', href: '#' },
-    ],
-    employers: [
-      { name: 'Post a Job', href: '/add-jobs' },
-      { name: 'My Jobs', href: '/my-jobs' },
-      { name: 'Pricing', href: '#' },
-      { name: 'Employer Resources', href: '#' },
-    ],
-    company: [
-      { name: 'About Us', href: '#' },
-      { name: 'Contact', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Press', href: '#' },
-    ],
-    support: [
-      { name: 'Help Center', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' },
-      { name: 'Cookie Policy', href: '#' },
-    ],
-  };
-
-  const socialLinks = [
-    { name: 'Facebook', icon: FiFacebook, href: '#' },
-    { name: 'Twitter', icon: FiTwitter, href: '#' },
-    { name: 'LinkedIn', icon: FiLinkedin, href: '#' },
-    { name: 'Instagram', icon: FiInstagram, href: '#' },
-  ];
-
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main footer content */}
-      <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company info */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 text-2xl font-bold mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <FiBriefcase className="text-white text-lg" />
               </div>
-              <span>Career Code</span>
+              <span className="text-xl font-bold">Career Code</span>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Your gateway to finding the perfect job. Connect with top employers and discover 
-              opportunities that match your skills and career goals.
+            <p className="text-gray-300 leading-relaxed">
+              Connecting talent with opportunity through modern technology. 
+              Find your dream job or discover the perfect candidate for your team.
             </p>
-            
-            {/* Contact info */}
-            <div className="space-y-2 text-sm text-gray-300">
-              <div className="flex items-center space-x-2">
-                <FiMapPin size={16} />
-                <span>123 Business Street, City, State 12345</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <FiPhone size={16} />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <FiFacebook size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <FiTwitter size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <FiLinkedin size={20} />
+              </a>
+              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <FiInstagram size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/jobs" className="text-gray-300 hover:text-white transition-colors">
+                  Browse Jobs
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* For Job Seekers */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">For Job Seekers</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/register" className="text-gray-300 hover:text-white transition-colors">
+                  Create Account
+                </Link>
+              </li>
+              <li>
+                <Link to="/jobs" className="text-gray-300 hover:text-white transition-colors">
+                  Search Jobs
+                </Link>
+              </li>
+              <li>
+                <Link to="/my-applications" className="text-gray-300 hover:text-white transition-colors">
+                  My Applications
+                </Link>
+              </li>
+              <li>
+                <Link to="/profile" className="text-gray-300 hover:text-white transition-colors">
+                  Profile
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center space-x-2 text-gray-300">
                 <FiMail size={16} />
                 <span>info@careercode.com</span>
-              </div>
-            </div>
-
-            {/* Social links */}
-            <div className="flex space-x-4 mt-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary-600 transition-colors duration-200"
-                  aria-label={social.name}
-                >
-                  <social.icon size={18} />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Job Seekers */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Job Seekers</h3>
-            <ul className="space-y-2">
-              {footerLinks.jobSeekers.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Employers */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Employers</h3>
-            <ul className="space-y-2">
-              {footerLinks.employers.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company & Support */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-2 mb-6">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="font-semibold text-lg mb-4">Support</h3>
-            <ul className="space-y-2">
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              </li>
+              <li className="flex items-center space-x-2 text-gray-300">
+                <FiPhone size={16} />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-start space-x-2 text-gray-300">
+                <FiMapPin size={16} className="mt-1" />
+                <span>123 Career Street<br />Tech City, TC 12345</span>
+              </li>
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Bottom footer */}
-      <div className="border-t border-gray-800">
-        <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
-              <p>
-                &copy; {currentYear} Career Code. All rights reserved.
-              </p>
-            </div>
-            
-            <div className="flex items-center space-x-1 text-sm text-gray-400">
-              <span>Made with</span>
-              <FiHeart className="text-red-500" size={16} />
-              <span>for career growth</span>
-            </div>
-            
-            <div className="flex space-x-6 text-sm">
-              <Link to="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link to="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Terms of Service
-              </Link>
-              <Link to="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Cookies
-              </Link>
-            </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-300 text-sm">
+            © {currentYear} Career Code. All rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
+              Cookie Policy
+            </a>
           </div>
         </div>
       </div>

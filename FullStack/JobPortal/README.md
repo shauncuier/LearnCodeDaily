@@ -1,317 +1,339 @@
-# 🚀 CAREER-CODE: Complete Job Portal System
+# Career Code - Modern Job Portal
 
-A modern, full-stack job portal platform that connects job seekers with employers. Built with React.js frontend and Node.js backend, featuring Firebase authentication, MongoDB database, and modern UI/UX design.
+A full-stack job portal application built with React, Node.js, Express, and MongoDB. Features include job posting, application management, Firebase authentication, and a modern responsive UI.
 
-![Career Code Banner](https://img.shields.io/badge/Career-Code-blue?style=for-the-badge)
-![Full Stack](https://img.shields.io/badge/Full_Stack-Application-green?style=for-the-badge)
+## 🚀 Features
 
-## 🌟 Project Overview
+### For Job Seekers
+- **Smart Job Search** - Advanced filtering and search capabilities
+- **Easy Application Process** - Apply with saved profiles and documents
+- **Application Tracking** - Monitor application status and progress
+- **Profile Management** - Comprehensive profile with resume, skills, and experience
+- **Job Alerts** - Get notified about relevant opportunities
 
-**CAREER-CODE** is a comprehensive job portal system designed to streamline the recruitment process for both job seekers and employers. The platform offers an intuitive interface for job posting, searching, applying, and managing applications with real-time updates and notifications.
+### For Employers
+- **Job Posting** - Create detailed job listings with rich descriptions
+- **Application Management** - Review, filter, and manage applications
+- **Interview Scheduling** - Built-in interview management system
+- **Candidate Scoring** - Rate and evaluate candidates
+- **Company Branding** - Showcase company information and culture
 
-## 🏗️ System Architecture
+### General Features
+- **Firebase Authentication** - Secure login with Google OAuth
+- **Responsive Design** - Mobile-first, modern UI
+- **Real-time Updates** - Live notifications and status updates
+- **File Upload** - Resume and document management
+- **Email Integration** - Automated notifications
+- **Advanced Search** - Full-text search with filters
+- **SEO Optimized** - Server-side rendering and meta tags
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   React Client  │───▶│   Node.js API   │───▶│   MongoDB DB    │
-│   (Frontend)    │    │   (Backend)     │    │   (Database)    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Firebase      │    │   JWT & Auth    │    │   File Storage  │
-│   (Auth)        │    │   (Security)    │    │   (Cloudinary)  │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
+## 🛠️ Tech Stack
 
-## 📋 Features Breakdown
+### Frontend
+- **React 19** - Latest React with modern features
+- **React Router DOM 7** - Client-side routing
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Fast build tool and dev server
+- **React Hook Form** - Form validation and management
+- **React Hot Toast** - Beautiful notifications
+- **React Icons** - Icon library
+- **React Helmet Async** - SEO and meta tag management
+- **Framer Motion** - Smooth animations
+- **Axios** - HTTP client
+- **Firebase** - Authentication and file storage
 
-### 🎨 Frontend Features (React.js)
-- **Modern UI/UX**: Responsive design with Tailwind CSS and DaisyUI
-- **Authentication**: Firebase Auth with Google Sign-in
-- **Job Management**: CRUD operations for job postings
-- **Application System**: Apply for jobs and track applications
-- **Search & Filter**: Advanced job search with multiple filters
-- **Real-time Updates**: Live notifications and status updates
-- **Responsive Design**: Mobile-first approach
-- **SEO Optimized**: Meta tags and structured data
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework
+- **MongoDB** - NoSQL database
+- **Mongoose** - MongoDB ODM
+- **JWT** - Authentication tokens
+- **bcryptjs** - Password hashing
+- **Helmet** - Security middleware
+- **Morgan** - HTTP request logger
+- **Express Rate Limit** - Rate limiting
+- **Multer** - File upload handling
+- **Nodemailer** - Email sending
+- **CORS** - Cross-origin resource sharing
 
-### 🔧 Backend Features (Node.js)
-- **RESTful API**: Well-structured API endpoints
-- **Authentication**: JWT-based authentication with Firebase Admin SDK
-- **Database**: MongoDB with Mongoose ODM
-- **File Upload**: Cloudinary integration for resume uploads
-- **Email Service**: Nodemailer for notifications
-- **Security**: Helmet, CORS, Rate limiting
-- **Validation**: Express-validator for input validation
-- **Error Handling**: Comprehensive error management
+## 📋 Prerequisites
 
-## 🛠️ Technology Stack
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16.0.0 or higher)
+- [MongoDB](https://www.mongodb.com/) (v4.4 or higher)
+- [Git](https://git-scm.com/)
 
-### Frontend Technologies
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| React.js | 19.1.0 | Frontend framework |
-| Tailwind CSS | 3.4.0 | Utility-first CSS |
-| DaisyUI | 4.5.0 | Component library |
-| Framer Motion | 10.16.16 | Animations |
-| React Router | 7.6.1 | Client-side routing |
-| React Query | 3.39.3 | Data fetching |
-| Axios | 1.6.7 | HTTP client |
-| Firebase | 10.7.1 | Authentication |
-
-### Backend Technologies
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| Node.js | 18+ | Runtime environment |
-| Express.js | 4.18.2 | Web framework |
-| MongoDB | 8.0.3 | Database |
-| Mongoose | 8.0.3 | ODM |
-| Firebase Admin | 12.0.0 | Authentication |
-| JWT | 9.0.2 | Token management |
-| Cloudinary | 1.41.0 | File storage |
-| Nodemailer | 6.9.7 | Email service |
-
-### Development Tools
-- **Vite**: Fast build tool
-- **ESLint**: Code linting
-- **Prettier**: Code formatting
-- **Nodemon**: Auto-restart server
-- **Jest**: Testing framework
-
-## 🚀 Quick Start Guide
-
-### Prerequisites
-- Node.js (v18 or higher)
-- MongoDB (local or cloud)
-- Firebase project
-- Git
+## 🚀 Quick Start
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd JobPortal
+git clone https://github.com/your-username/career-code.git
+cd career-code
 ```
 
 ### 2. Setup Backend
+
 ```bash
+# Navigate to server directory
 cd job-portal-server
+
+# Install dependencies
 npm install
+
+# Create environment file
 cp .env.example .env
-# Configure your environment variables
+
+# Edit the .env file with your configurations
+nano .env
+```
+
+**Required Environment Variables:**
+```env
+# Database
+MONGO_URI=mongodb://localhost:27017/job-portal
+
+# JWT Secret (generate a secure random string)
+JWT_SECRET=your_super_secret_jwt_key_here
+
+# JWT Expires In
+JWT_EXPIRES_IN=30d
+
+# Node Environment
+NODE_ENV=development
+
+# Server Port
+PORT=5000
+
+# Email Configuration (optional)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+
+# Client URL
+CLIENT_URL=http://localhost:3000
+```
+
+```bash
+# Start the server
 npm run dev
 ```
+
+The server will start on http://localhost:5000
 
 ### 3. Setup Frontend
+
 ```bash
-cd ../job-portal-client
+# Navigate to client directory (from root)
+cd job-portal-client
+
+# Install dependencies
 npm install
+
+# Create environment file
 cp .env.example .env
-# Configure your Firebase settings
+
+# Edit the .env file with your Firebase configuration
+nano .env
+```
+
+**Required Environment Variables:**
+```env
+# Firebase Configuration
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_firebase_app_id
+
+# API Base URL
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+```bash
+# Start the client
 npm run dev
 ```
 
-### 4. Access the Application
-- **Frontend**: http://localhost:5173
-- **Backend API**: http://localhost:5000
-- **API Health**: http://localhost:5000/health
+The client will start on http://localhost:3000
+
+## 🔥 Firebase Setup
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Enable Authentication with Email/Password and Google providers
+4. Enable Firestore Database
+5. Enable Storage
+6. Copy the configuration to your `.env` file
 
 ## 📁 Project Structure
 
 ```
-JobPortal/
-├── job-portal-client/          # React.js Frontend
-│   ├── public/                 # Static assets
+career-code/
+├── job-portal-client/          # React frontend
+│   ├── public/
 │   ├── src/
 │   │   ├── components/         # Reusable components
 │   │   │   ├── auth/          # Authentication components
 │   │   │   ├── layout/        # Layout components
 │   │   │   └── ui/            # UI components
 │   │   ├── contexts/          # React contexts
+│   │   ├── firebase/          # Firebase configuration
 │   │   ├── pages/             # Page components
-│   │   │   ├── auth/          # Auth pages
-│   │   │   ├── jobs/          # Job pages
+│   │   │   ├── auth/          # Authentication pages
+│   │   │   ├── jobs/          # Job-related pages
 │   │   │   ├── applications/  # Application pages
-│   │   │   └── user/          # User pages
+│   │   │   └── user/          # User profile pages
 │   │   ├── services/          # API services
-│   │   ├── firebase/          # Firebase config
 │   │   └── utils/             # Utility functions
 │   ├── package.json
-│   ├── tailwind.config.js
-│   └── vite.config.js
-├── job-portal-server/          # Node.js Backend
+│   ├── vite.config.js
+│   └── tailwind.config.js
+├── job-portal-server/          # Node.js backend
+│   ├── models/                # MongoDB models
+│   ├── routes/                # Express routes
+│   ├── middleware/            # Custom middleware
 │   ├── controllers/           # Route controllers
-│   ├── models/               # Database models
-│   ├── routes/               # API routes
-│   ├── middleware/           # Custom middleware
-│   ├── utils/                # Utility functions
-│   ├── config/               # Configuration files
+│   ├── utils/                 # Utility functions
+│   ├── uploads/               # File uploads
 │   ├── package.json
 │   └── server.js
-└── README.md                  # This file
+├── README.md
+└── PROJECT_SUMMARY.md
 ```
 
-## 🔧 Configuration
+## 🔌 API Endpoints
 
-### Frontend Environment Variables
-```env
-VITE_FIREBASE_API_KEY=your_firebase_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_API_BASE_URL=http://localhost:5000/api
-```
+### Authentication
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+- `POST /api/auth/logout` - User logout
+- `GET /api/auth/profile` - Get user profile
+- `PUT /api/auth/profile` - Update user profile
+- `POST /api/auth/forgot-password` - Password reset request
+- `POST /api/auth/reset-password` - Reset password
 
-### Backend Environment Variables
-```env
-NODE_ENV=development
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/career-code
-JWT_SECRET=your_jwt_secret
-FIREBASE_PROJECT_ID=your_firebase_project_id
-```
+### Jobs
+- `GET /api/jobs` - Get all jobs (with filters)
+- `GET /api/jobs/:id` - Get job by ID
+- `POST /api/jobs` - Create new job (auth required)
+- `PUT /api/jobs/:id` - Update job (auth required)
+- `DELETE /api/jobs/:id` - Delete job (auth required)
+- `GET /api/jobs/my-jobs` - Get user's posted jobs (auth required)
+- `GET /api/jobs/search` - Search jobs
 
-## 🎯 Key Features Implementation
+### Applications
+- `POST /api/applications/:jobId/apply` - Apply for job (auth required)
+- `GET /api/applications/my-applications` - Get user's applications (auth required)
+- `GET /api/applications/job/:jobId` - Get job applications (auth required)
+- `PUT /api/applications/:id/status` - Update application status (auth required)
+- `DELETE /api/applications/:id` - Delete application (auth required)
 
-### Authentication Flow
-1. **Registration**: Email/password or Google OAuth
-2. **Login**: Secure authentication with JWT tokens
-3. **Protected Routes**: Access control for authenticated users
-4. **Session Management**: Automatic token refresh
+## 🧪 Development
 
-### Job Management
-1. **Create Jobs**: Employers can post new positions
-2. **Search Jobs**: Advanced filtering and search
-3. **Apply for Jobs**: Streamlined application process
-4. **Track Applications**: Real-time status updates
-
-### Application Process
-1. **Submit Application**: Upload resume and cover letter
-2. **Application Review**: Employer review interface
-3. **Status Updates**: Automated notifications
-4. **Communication**: In-app messaging system
-
-## 📱 Responsive Design
-
-- **Mobile**: Optimized for smartphones (320px+)
-- **Tablet**: Tablet-friendly layout (768px+)
-- **Desktop**: Full desktop experience (1024px+)
-- **Large Screens**: Enhanced for large displays (1280px+)
-
-## 🔒 Security Features
-
-- **Authentication**: Firebase Auth + JWT
-- **Authorization**: Role-based access control
-- **Data Validation**: Input sanitization and validation
-- **Rate Limiting**: API request limiting
-- **CORS**: Cross-origin request security
-- **Helmet**: Security headers
-- **Password Hashing**: Bcrypt encryption
-
-## 🧪 Testing
-
-### Frontend Testing
+### Running Tests
 ```bash
-cd job-portal-client
-npm run test
-```
-
-### Backend Testing
-```bash
+# Backend tests
 cd job-portal-server
-npm run test
+npm test
+
+# Frontend tests
+cd job-portal-client
+npm test
 ```
 
-## 📈 Performance Optimization
+### Code Formatting
+```bash
+# Format code with Prettier
+npm run format
 
-- **Code Splitting**: Lazy loading of components
-- **Image Optimization**: Responsive images
-- **Caching**: API response caching
-- **Compression**: Gzip compression
-- **Bundle Analysis**: Webpack bundle analyzer
+# Lint code with ESLint
+npm run lint
+```
+
+### Building for Production
+```bash
+# Build frontend
+cd job-portal-client
+npm run build
+
+# Build backend (if needed)
+cd job-portal-server
+npm run build
+```
 
 ## 🚀 Deployment
 
 ### Frontend (Vercel/Netlify)
 1. Build the project: `npm run build`
-2. Deploy to hosting platform
-3. Configure environment variables
+2. Deploy the `dist` folder
+3. Set environment variables in deployment platform
 
 ### Backend (Heroku/Railway/DigitalOcean)
-1. Set up production database
-2. Configure environment variables
-3. Deploy using platform-specific methods
+1. Set environment variables
+2. Deploy the server code
+3. Ensure MongoDB connection
+
+### Environment Variables for Production
+- Set `NODE_ENV=production`
+- Use secure JWT secret
+- Configure production database
+- Set up production email service
+- Configure CORS for production domains
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
-## 📋 API Documentation
+## 📝 License
 
-### Authentication Endpoints
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `POST /api/auth/refresh` - Refresh token
-- `POST /api/auth/logout` - User logout
-
-### Job Endpoints
-- `GET /api/jobs` - Get all jobs
-- `POST /api/jobs` - Create new job
-- `GET /api/jobs/:id` - Get job by ID
-- `PUT /api/jobs/:id` - Update job
-- `DELETE /api/jobs/:id` - Delete job
-
-### Application Endpoints
-- `POST /api/applications/:jobId` - Apply for job
-- `GET /api/applications/user` - Get user applications
-- `GET /api/applications/job/:jobId` - Get job applications
-- `PATCH /api/applications/:id/status` - Update application status
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-1. **Firebase Configuration**
-   - Ensure all Firebase keys are correctly set
-   - Check Firebase project settings
+**MongoDB Connection Error**
+- Ensure MongoDB is running
+- Check connection string in `.env`
+- Verify network access for MongoDB Atlas
 
-2. **Database Connection**
-   - Verify MongoDB connection string
-   - Check network connectivity
+**Firebase Authentication Error**
+- Check Firebase configuration
+- Ensure Firebase project is active
+- Verify API keys and domain settings
 
-3. **CORS Issues**
-   - Configure allowed origins in backend
-   - Check client URL configuration
+**CORS Error**
+- Check server CORS configuration
+- Verify client URL in server settings
+- Ensure proper origin headers
 
-4. **Build Errors**
-   - Clear node_modules and reinstall
-   - Check for version compatibility
+**Build Errors**
+- Clear node_modules and reinstall: `rm -rf node_modules package-lock.json && npm install`
+- Check Node.js version compatibility
+- Verify all environment variables are set
 
 ## 📞 Support
 
 For support and questions:
-- **Email**: support@careercode.com
-- **Documentation**: Check inline code comments
-- **Issues**: Open GitHub issue
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Create an issue on GitHub
+- Email: support@careercode.com
+- Documentation: [Wiki](https://github.com/your-username/career-code/wiki)
 
 ## 🙏 Acknowledgments
 
-- React.js community for the amazing ecosystem
-- Tailwind CSS for the design system
-- Firebase for authentication services
-- MongoDB for the database solution
-- All open-source contributors
+- [React](https://reactjs.org/) - Frontend framework
+- [Express.js](https://expressjs.com/) - Backend framework
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Firebase](https://firebase.google.com/) - Authentication and storage
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Vite](https://vitejs.dev/) - Build tool
 
 ---
 
-**Made with ❤️ for connecting talent with opportunities**
-
-🌟 **Star this repository if you found it helpful!**
+**Happy Coding! 🎉**

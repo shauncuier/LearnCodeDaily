@@ -1,14 +1,5 @@
-import { createContext, useContext, useEffect, useState } from 'react';
-import { 
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-  onAuthStateChanged,
-  sendPasswordResetEmail,
-  updateProfile
-} from 'firebase/auth';
-import { auth, googleProvider } from '../firebase/config';
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import { authAPI } from '../services/api';
 import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
@@ -16,7 +7,7 @@ const AuthContext = createContext();
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error('useAuth must be used within AuthProvider');
   }
   return context;
 };
@@ -24,142 +15,107 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [token, setToken] = useState(null);
 
-  // Sign up with email and password
-  const signUp = async (email, password, displayName) => {
+  // Check if user is authenticated on app load
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      // Verify token with backend
+      authAPI.getProfile()
+        .then(response => {
+          setUser(response.data);
+        })
+        .catch(error => {
+          console.error('Token verification failed:', error);
+          localStorage.removeItem('token');
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
+  // Register with email and password
+  const register = async (userData) => {
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      await updateProfile(userCredential.user, { displayName });
+      const response = await authAPI.register(userData);
+      const { token, user } = response.data;
+      
+      localStorage.setItem('token', token);
+      setUser(user);
       toast.success('Account created successfully!');
-      return userCredential;
+      return response;
     } catch (error) {
-      toast.error(getErrorMessage(error.code));
+      const message = error.response?.data?.message || 'Registration failed';
+      toast.error(message);
       throw error;
     }
   };
 
-  // Sign in with email and password
-  const signIn = async (email, password) => {
+  // Login with email and password
+  const login = async (credentials) => {
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      toast.success('Signed in successfully!');
-      return userCredential;
+      const response = await authAPI.login(credentials);
+      const { token, user } = response.data;
+      
+      localStorage.setItem('token', token);
+      setUser(user);
+      toast.success('Logged in successfully!');
+      return response;
     } catch (error) {
-      toast.error(getErrorMessage(error.code));
+      const message = error.response?.data?.message || 'Login failed';
+      toast.error(message);
       throw error;
     }
   };
 
-  // Sign in with Google
-  const signInWithGoogle = async () => {
-    try {
-      const userCredential = await signInWithPopup(auth, googleProvider);
-      toast.success('Signed in with Google successfully!');
-      return userCredential;
-    } catch (error) {
-      toast.error(getErrorMessage(error.code));
-      throw error;
-    }
-  };
-
-  // Sign out
+  // Logout
   const logout = async () => {
     try {
-      await signOut(auth);
-      setToken(null);
-      toast.success('Signed out successfully!');
+      await authAPI.logout();
     } catch (error) {
-      toast.error('Failed to sign out');
-      throw error;
+      console.error('Logout error:', error);
+    } finally {
+      localStorage.removeItem('token');
+      setUser(null);
+      toast.success('Logged out successfully!');
     }
+  };
+
+  // Update user data
+  const updateUser = (userData) => {
+    setUser(userData);
   };
 
   // Reset password
   const resetPassword = async (email) => {
     try {
-      await sendPasswordResetEmail(auth, email);
+      await authAPI.forgotPassword(email);
       toast.success('Password reset email sent!');
     } catch (error) {
-      toast.error(getErrorMessage(error.code));
+      const message = error.response?.data?.message || 'Failed to send reset email';
+      toast.error(message);
       throw error;
     }
   };
-
-  // Update user profile
-  const updateUserProfile = async (updates) => {
-    try {
-      await updateProfile(auth.currentUser, updates);
-      toast.success('Profile updated successfully!');
-    } catch (error) {
-      toast.error('Failed to update profile');
-      throw error;
-    }
-  };
-
-  // Get error message from Firebase error code
-  const getErrorMessage = (errorCode) => {
-    switch (errorCode) {
-      case 'auth/user-not-found':
-        return 'No account found with this email address.';
-      case 'auth/wrong-password':
-        return 'Incorrect password.';
-      case 'auth/email-already-in-use':
-        return 'An account with this email already exists.';
-      case 'auth/weak-password':
-        return 'Password should be at least 6 characters long.';
-      case 'auth/invalid-email':
-        return 'Invalid email address.';
-      case 'auth/too-many-requests':
-        return 'Too many failed attempts. Please try again later.';
-      case 'auth/network-request-failed':
-        return 'Network error. Please check your connection.';
-      default:
-        return 'An error occurred. Please try again.';
-    }
-  };
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
-        try {
-          const idToken = await user.getIdToken();
-          setToken(idToken);
-          setUser({
-            uid: user.uid,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL,
-            emailVerified: user.emailVerified
-          });
-        } catch (error) {
-          console.error('Error getting user token:', error);
-        }
-      } else {
-        setUser(null);
-        setToken(null);
-      }
-      setLoading(false);
-    });
-
-    return unsubscribe;
-  }, []);
 
   const value = {
     user,
-    token,
     loading,
-    signUp,
-    signIn,
-    signInWithGoogle,
+    register,
+    login,
     logout,
     resetPassword,
-    updateUserProfile
+    updateUser
   };
 
   return (
     <AuthContext.Provider value={value}>
-      {children}
+      {!loading && children}
     </AuthContext.Provider>
   );
 };
+
+export default AuthContext;

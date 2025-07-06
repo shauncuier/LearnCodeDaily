@@ -1,22 +1,24 @@
+import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import LoadingSpinner from '../ui/LoadingSpinner';
 
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = ({ children, requireAuth = true }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
 
   if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <LoadingSpinner size="lg" />
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
-  if (!user) {
-    // Redirect to login page with return url
+  if (requireAuth && !user) {
+    // Redirect to login with return url
     return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  if (!requireAuth && user) {
+    // Redirect authenticated users away from auth pages
+    return <Navigate to="/" replace />;
   }
 
   return children;
