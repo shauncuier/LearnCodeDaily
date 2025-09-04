@@ -26,4 +26,16 @@ let user: {
     gender: 'other'
 };
 
+
+
+// Optional Properties
+let user2: {
+    name: string;
+    age: number;
+    gender?: 'male' | 'female' | 'other';
+} = {
+    name: "Jane Doe",
+    age: 25
+};
+
 export { };
