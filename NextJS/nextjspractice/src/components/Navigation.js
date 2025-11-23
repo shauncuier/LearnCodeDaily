@@ -35,6 +35,9 @@ export default function Navigation() {
             {user && (
               <>
                 <Link href="/dashboard" className="text-gray-700 hover:text-primary transition-colors">Dashboard</Link>
+                {(hasRole('admin') || hasRole('super_admin')) && (
+                  <Link href="/admin" className="text-gray-700 hover:text-primary transition-colors">Admin</Link>
+                )}
                 <div className="flex items-center gap-4">
                   <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                     {user.name} ({user.role})
