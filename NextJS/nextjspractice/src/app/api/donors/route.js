@@ -25,6 +25,13 @@ export async function GET(request) {
     params.push(`%${upazila.toLowerCase()}%`);
   }
 
+  // Filter by availability (default to available)
+  const availability = searchParams.get('availability') || 'available';
+  if (availability && availability !== 'all') {
+    query += ' AND availability = ?';
+    params.push(availability);
+  }
+
   try {
     const stmt = db.prepare(query);
     const donors = stmt.all(...params);

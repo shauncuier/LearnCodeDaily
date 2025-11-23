@@ -19,6 +19,7 @@ export default function Navigation() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6 font-medium text-sm">
             <Link href="/search" className="text-gray-700 hover:text-primary transition-colors">Find Donors</Link>
+            <Link href="/requests" className="text-gray-700 hover:text-primary transition-colors">Blood Requests</Link>
             <Link href="/request" className="text-gray-700 hover:text-primary transition-colors">Request Blood</Link>
 
             {!user && (
