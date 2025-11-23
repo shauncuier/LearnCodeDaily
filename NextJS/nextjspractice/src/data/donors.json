@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "John Doe",
+        "bloodGroup": "O+",
+        "location": "New York",
+        "phone": "123-456-7890",
+        "email": "john@example.com",
+        "lastDonation": "2023-10-01"
+    },
+    {
+        "id": "2",
+        "name": "Jane Smith",
+        "bloodGroup": "A-",
+        "location": "Los Angeles",
+        "phone": "987-654-3210",
+        "email": "jane@example.com",
+        "lastDonation": "2023-11-15"
+    }
+]
